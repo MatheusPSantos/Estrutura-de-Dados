@@ -31,11 +31,20 @@ Lista2 * inserir(Lista2 * L, int n) {
 Lista2 * inserirFim(Lista2 * L, int n) {
     Lista2 * novo, * P = L;
     novo = (Lista2*)malloc(sizeof(Lista2));
-    novo->info = N;
+    novo->info = n;
     novo->prox = NULL;
     while(P->prox != NULL)
         P = P->prox;
     P->prox = novo;
     novo->ant = P;
 
+    return L;
+}
+
+// impressão da lista
+void imprimir(Lista2 * L) {
+    Lista2 * P;
+    for(P =L; P != NULL; P = P->prox) 
+        printf("%d -> ", P->info);
+    printf("NULL\n");
 }
