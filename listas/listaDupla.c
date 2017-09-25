@@ -111,6 +111,14 @@ Lista2 * remover(Lista2 * L, int n) {
 
     return L;
 }
+// contador de nós
+int contador(Lista2 * L) {
+    if(L != NULL)
+        return 1 + contador(L->prox);
+    
+    return 0;
+}
+
 
 // impressão da lista
 void imprimir(Lista2 * L) {
