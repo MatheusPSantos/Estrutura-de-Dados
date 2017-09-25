@@ -78,3 +78,12 @@ void imprimir(Lista * L) {
 		printf("%d -> ", P->info);
 	printf("NULL\n");
 }
+
+// função imprimir recursiva
+void imprimirRecursive(Lista * l) {
+	if(l != NULL) {
+		printf("%d ->", l->info);
+		imprimir(l->prox);
+	}
+	printf("NULL\n");
+}

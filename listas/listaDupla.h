@@ -16,5 +16,11 @@ Lista2 * inserirFim(Lista2 * L, int n);
 // inserção ordenada
 Lista2 * inserirOrdem(Lista2 * L, int n);
 
+// função de busca
+Lista2 * buscar(Lista2 * L, int n);
+
+// função de remoção de um nó
+Lista2 * remover(Lista2 * L, int n);
+
 // impressão da lista
 void imprimir(Lista2 * L);

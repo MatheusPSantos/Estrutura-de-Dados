@@ -77,6 +77,39 @@ Lista2 * inserirOrdem(Lista2 * L, int n) {
 
         p = p->prox;
     }
+
+    return L;
+}
+
+// função de busca
+Lista2 * buscar(Lista2 * L, int n) {
+    Lista2 * p;
+    for(p = L; p != NULL; p = p->prox) {
+        if(p->info == n)
+            return p;
+    }
+
+    return NULL;
+}
+
+// remoção de um nó da lista
+Lista2 * remover(Lista2 * L, int n) {
+    Lista2 * p;
+
+    p = buscar(L, n);
+
+    if(p == NULL)
+        return L;
+    if(p == L)
+        L = p->prox;
+    else
+        p->ant->prox = p->prox;
+    if(p->prox != NULL)
+        p->prox->ant = p->ant;
+    
+    free(p);
+
+    return L;
 }
 
 // impressão da lista
