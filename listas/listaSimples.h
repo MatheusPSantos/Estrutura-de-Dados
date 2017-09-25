@@ -18,3 +18,5 @@ Lista * remover(Lista * L, int n);
 
 // função para impressão da lista
 void imprimir(Lista * L);
+
+void imprimirRecursive(Lista * L);
