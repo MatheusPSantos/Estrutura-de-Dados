@@ -13,7 +13,7 @@ struct vet_fila {
 
 typedef struct vet_fila V_FILA;
 
-// cria��o da Fila alocando dinamicamente e vazia, com ini = fim
+// criação da Fila alocando dinamicamente e vazia, com ini = fim
 V_FILA* cria_VFILA(void) {
     V_FILA * vf = (V_FILA*)malloc(sizeof(V_FILA));
     vf->ini = 0;
@@ -21,7 +21,7 @@ V_FILA* cria_VFILA(void) {
     return vf;
 }
 
-// fun��o de inser��o numa fila com vetor
+// fun��o de inser��o numa fila com vetor
 void insere_vfila(V_FILA* vf, int valor) {
     if(vf->fim == N) {
         printf("FILA CHEIA.\nSAINDO ...\n");
@@ -31,7 +31,7 @@ void insere_vfila(V_FILA* vf, int valor) {
     vf->fim++;
 }
 
-// fun��o que conta elementos na fila
+// fun��o que conta elementos na fila
 int cont_elem_VFila(V_FILA* vf){
     if(vf->fim == vf->ini)
         return 0;
@@ -43,7 +43,7 @@ int cont_elem_VFila(V_FILA* vf){
 }
 
 /** Fila com LISTA */
-// estrutura do n�
+// estrutura do n�
 struct no {
     int info;
     struct no * prox;
@@ -68,4 +68,45 @@ L_FILA* cria_LFILA(void) {
 }
 
 // inserindo na fila com lista
-void insere_lfila(No* no, int valor){}
+/* necessário implementar a função de inserção
+   no nó e depois usá-la na função de inserção na fila
+*/
+// insere somente no fim
+No* No_insere(No* fim, int v) {
+    No* novo = (No*)malloc(sizeof(No));
+    novo->info = v;
+    novo->prox = NULL;
+    // verificar se a lista não está vazia
+    if(fim != NULL)
+        fim->prox = novo;
+    return novo;
+}
+
+// função retira do início
+No* No_retira(No* ini) {
+    No* aux = ini->prox;
+    free(ini);
+    return aux;
+}
+// inserção na fila usando a implementação de inserção
+// usando lista
+void insere_lfila(L_FILA* lf, int valor){
+    lf->fim = No_insere(lf->fim, valor);
+    // testa se a fila estava vazia
+    if(lf->ini == NULL)
+        lf->ini = lf->fim;
+}
+
+int remove_lfila(Fila* lf) {
+    int v;
+    if(lf == NULL){
+        printf("Fila vazia\n");
+        exit(1);
+    }
+    v = lf->ini->info;
+    lf->ini = No_retira(lf->ini);
+    // testa se a fila está vazia
+    if(lf->ini == NULL)
+        lf->fim = NULL;
+    return v;
+}

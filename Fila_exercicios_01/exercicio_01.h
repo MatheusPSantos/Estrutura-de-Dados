@@ -1,4 +1,4 @@
-// CABEÇALHOS DAS FUNÇÂO DE FILA QUESTÃO 1
+// CABEï¿½ALHOS DAS FUNï¿½ï¿½O DE FILA QUESTï¿½O 1
 #include "exercicio_01.c"
 // FILA COM VETOR
 
@@ -7,3 +7,8 @@ void insere_vfila(V_FILA* vf, int valor);
 int cont_elem_VFila(V_FILA* vf);
 
 // FILA COM LISTA
+
+typedef struct list_fila L_FILA;
+L_FILA* cria_LFILA(void);
+void insere_lfila(L_FILA* lf, int valor);
+int remove_lfila(Fila* lf);
