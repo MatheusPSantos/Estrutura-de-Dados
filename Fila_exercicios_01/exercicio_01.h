@@ -11,4 +11,5 @@ int cont_elem_VFila(V_FILA* vf);
 typedef struct list_fila L_FILA;
 L_FILA* cria_LFILA(void);
 void insere_lfila(L_FILA* lf, int valor);
-int remove_lfila(Fila* lf);
+int remove_lfila(L_FILA* lf);
+int cont_elem_LFila(L_FILA* lf);

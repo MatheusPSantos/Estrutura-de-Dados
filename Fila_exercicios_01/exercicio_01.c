@@ -97,7 +97,7 @@ void insere_lfila(L_FILA* lf, int valor){
         lf->ini = lf->fim;
 }
 
-int remove_lfila(Fila* lf) {
+int remove_lfila(L_FILA* lf) {
     int v;
     if(lf == NULL){
         printf("Fila vazia\n");
@@ -109,4 +109,12 @@ int remove_lfila(Fila* lf) {
     if(lf->ini == NULL)
         lf->fim = NULL;
     return v;
+}
+
+// função que conta o número de nós da fila
+int cont_elem_LFila(L_FILA* lf) {
+    No* aux = lf->ini;
+    int c;
+    for(c = 0;aux != lf->fim; c++, aux=aux->prox);
+    return c;
 }
