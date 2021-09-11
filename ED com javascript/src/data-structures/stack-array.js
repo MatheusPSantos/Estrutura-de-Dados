@@ -1,4 +1,4 @@
-export default class Stack {
+export default class StackArray {
     constructor() {
         this.items = [];
     }
