@@ -49,3 +49,5 @@ class Queue {
         return objString;
     }
 }
+
+module.exports = Queue;
