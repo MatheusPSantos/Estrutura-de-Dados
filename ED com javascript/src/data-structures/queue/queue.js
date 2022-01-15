@@ -20,7 +20,6 @@ class Queue {
         return result;
     }
 
-    // retorna o elemento da frente da fila
     peek() {
         if (this.isEmpty()) return undefined;
         return this.items[this.lowestCount];
