@@ -42,6 +42,27 @@ Elas podem ter apenas uma direção de referência ou uma referência dupla. A �
 É uma lista que mantém todos os seus elementos ordenados, para manter todos eles ordenados, em vez de aplicar um algoritmo de inserção, fazemos a inserção do elemento na posiçao correta.
 
 
+## Dicionários e Hashes
+Em um dicionário (ou mapa), armazenamos valores em pares ` [chave, valor] `. O mesmo vale para Hashes
+(armazenam valores em pares `[chave, valor]`), mas o modo como implementamos essas estruturas de dados é um pouco diferente, pois
+os dicionários podem armazenar apenas um valor único por chave.
+### Estrutura de dados de dicionário
+O dicionário é usado para armazenar pares de chave-valor, em que a chave pode ser usada para encontrar um elemento em particular.
+Um dicionário também é conhecido como `map`, tabela de símbolos e array associativo.
+
+### Tabela Hash
+O hashing consiste em econtrar um valor em uma estrutura de dados o mais rápido possível.
+Quado usamos uma função de hash, já sabemos em que posição o valor se encontra, portanto podemos simplesmente o acessar.
+Uma função de hash é uma função que, dada uma `key`, devolve o endereço em que o 
+valor está na tabela.
+
+A linguagem Javascript utiliza uma tabela hash internamente para representar cada objeto.
+Nesse caso cada propriedade e cada método do objeto são armazenados como tipos de objeto `key`,
+e cada  `key` aponta para o respectivo membro do objeto.
+
+`Hash lose-lose` onde simplesmente somama-se os valores ASCII de cada caractere da chave.
+
+
 
 
 
