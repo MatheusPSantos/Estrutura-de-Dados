@@ -1,4 +1,5 @@
 const { defaultToString } = require("../../utils");
+const ValuePair = require("../dictionaries/value-pair");
 
 class HashTable {
   constructor(toStrFn = defaultToString) {
@@ -25,7 +26,7 @@ class HashTable {
   put(key, value) {
     if (key !== null && value !== null) {
       const position = this.hashCode(key);
-      this.tabble[position] = new ValuePair(key, value);
+      this.table[position] = new ValuePair(key, value);
       return true;
     }
     return false;
@@ -47,6 +48,22 @@ class HashTable {
     }
 
     return false;
+  }
+
+  isEmpty() {
+    return this.table === {};
+  }
+
+  toString() {
+    if (this.isEmpty()) {
+      return "";
+    }
+    const keys = Object.keys(this.table);
+    let objString = `[${keys[0]} => ${this.table[keys[0]].toString()}]`;
+    for (let i = 1; i < keys.length; i++) {
+      objString = `${objString},{${keys[i]} => ${this.table[keys[i]].toString()}}`
+    }
+    return objString;
   }
 }
 

@@ -62,6 +62,14 @@ e cada  `key` aponta para o respectivo membro do objeto.
 
 `Hash lose-lose` onde simplesmente soma-se os valores ASCII de cada caractere da chave.
 
+### Tabela hash versus conjunto hash
+Conjunto hash ou hash set, é uma estrutura de dados de um conjunto hash composta de um conjunto;
+contudo, para inserir, remover ou acessar elementos, usamos uma função `hashCode`.
+A diferença é que ao invés de adicionarmos um par chave-valor,apenas o valor será inserido.
+
+### Tratando conlisões nas tabelas hash
+Podemos ter o mesmo valor de hash, uma colisão, pois tentaremos atribuir diferentes pares chave-valor à mesma
+ posição na instância de `HashTable`.
 
 
 
