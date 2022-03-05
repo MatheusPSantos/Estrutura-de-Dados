@@ -72,7 +72,8 @@ Podemos ter o mesmo valor de hash, uma colisão, pois tentaremos atribuir difere
  posição na instância de `HashTable`.
 
 
-
+### Memoização
+É uma técnica de otimização em que armazenamos os valores de resultados anteriores, de modo semelhante a um cache. 
 
 
 
