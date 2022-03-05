@@ -60,7 +60,7 @@ A linguagem Javascript utiliza uma tabela hash internamente para representar cad
 Nesse caso cada propriedade e cada método do objeto são armazenados como tipos de objeto `key`,
 e cada  `key` aponta para o respectivo membro do objeto.
 
-`Hash lose-lose` onde simplesmente somama-se os valores ASCII de cada caractere da chave.
+`Hash lose-lose` onde simplesmente soma-se os valores ASCII de cada caractere da chave.
 
 
 
