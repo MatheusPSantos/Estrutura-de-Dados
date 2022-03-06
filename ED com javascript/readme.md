@@ -75,6 +75,15 @@ Podemos ter o mesmo valor de hash, uma colisão, pois tentaremos atribuir difere
 ### Memoização
 É uma técnica de otimização em que armazenamos os valores de resultados anteriores, de modo semelhante a um cache. 
 
+### Árvores
+É um modelo abstrato de uma estrutura hierárquica.
+
+Uma árvore é constituída de nós com relacionamento pai-filho. Todo nó tem um pai, exceto o nó ráiz, e zero ou mais filhos. Um nó que não tem filhos é chamado de nó externo.
+
+### Árvore binária e árvore binária de busca
+Arvores binárias tem no máximo dois filhos: um à esquerda e outra à direita.
+
+Key pe o termo pelo qual um nó é conhecido na terminologia de árvores.
 
 
 
